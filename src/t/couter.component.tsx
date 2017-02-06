@@ -1,41 +1,35 @@
 import * as React from 'react';
-import './couter.style.css';
 
 
+export default class Counter extends React.PureComponent<IProp, IState>{
 
-export default class Counter extends React.PureComponent< IProp, IState >{
-
-    static defaultProps = { };
-
-    constructor( ) {
-        super( );
+    constructor(props) {
+        super(props);
+        this.add = this.add.bind(this);
+        this.del = this.del.bind(this);
         this.state = {
-            count: 2
+            count: 1
         }
     }
 
-    add = ( ) => {
+    add() {
         let { count } = this.state;
         this.setState({
             count: ++count
         });
-        require.ensure([],function(require){
-            let a = require('./ensure');
-            a.test( )
-        });
     }
 
-    del = ( ) => {
+    del() {
         let { count } = this.state;
         this.setState({
             count: --count
         })
     }
 
-    render( ) {
+    render() {
         let { count } = this.state;
         return <div>
-            <h3 className="title">{ count }</h3>
+            <h3 className="title">{count}</h3>
             <button onClick={this.add}>+</button>
             <button onClick={this.del}>-</button>
         </div>

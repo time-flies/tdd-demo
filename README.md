@@ -1,4 +1,4 @@
-# tdd-demo
+# tdd-demo (在https://github.com/Penggggg/tdd-demo.git的基础上稍作修改后可以正常运行，原版的编译和运行时都会报错)
 
 ## a react+typescript+tdd demo
 ### while 'npm run test', our test will run automatically when the test files or project files change
@@ -13,5 +13,12 @@ react+typescript的tdd demo
 ### 4. npm start ( start the project )
 ### 5. npm run test ( start to run test )
 
+## 说明
+### 1. 目录结构
+src --- 组件的源码目录
+test --- 项目的测试目录
+ ├─business --- 项目业务测试代码
+ └─component --- 项目UI组件测试代码
 
-## 
+### 2. 运行测试代码
+在安装完依赖后，直接gulp即可运行测试任务

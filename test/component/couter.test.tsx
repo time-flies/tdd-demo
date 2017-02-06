@@ -6,23 +6,23 @@ import * as React from 'react';
 import Counter from '../../src/t/couter.component';
 
 
-describe('Counter Test', ( ) => {
+describe('Counter Test', () => {
 
-    it('Init Data', ( ) => {
+    it('#Init Data', () => {
         let c = shallow(<Counter />);
-        expect( c.find('h3').text( )).to.equal('1');
+        expect(c.find('h3').text()).to.equal('1');
     });
 
-    it('add button', ( ) => {
+    it('#add button', () => {
         let c = mount(<Counter />);
         c.find('button').at(0).simulate('click');
-        expect( c.find('h3').text( )).to.equal('2');
+        expect(c.find('h3').text()).to.equal('2');
     })
 
-    it('del button', ( ) => {
+    it('#del button', () => {
         let c = mount(<Counter />);
         c.find('button').at(1).simulate('click');
-        expect( c.find('h3').text( )).to.equal('0');
+        expect(c.find('h3').text()).to.equal('0');
     })
 
 
