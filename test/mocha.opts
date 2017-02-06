@@ -1,0 +1,5 @@
+--reporter spec
+--recursive
+--growl
+--compilers tsx:ts-node/register,ts:ts-node
+--require ./config/dom.env.js

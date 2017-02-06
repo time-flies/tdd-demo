@@ -17,7 +17,7 @@ gulp.task('run_test', function() {
 function runTest() {
     try { if (workerProcess !== undefined || workerProcess !== null) { workerProcess.kill(); } } catch (e) {}
     workerProcess = child_process.exec(
-        'mocha --compilers ts:ts-node/register,tsx:ts-node/register ./test/**/*.* --require ./config/dom.env.js',
+        'mocha test',
         function(error, stdout, stderr) {
             if (error) { console.log(error.stack) }
             console.log(stdout);
